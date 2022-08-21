@@ -167,7 +167,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ZeikomiColorPicker"
         "ProductCode" = "8:{BF3C40CF-096F-414D-B807-CC6B3BF1FA3A}"
-        "PackageCode" = "8:{9FF8C0F2-C7DF-41FB-9ACD-FA4CC236D593}"
+        "PackageCode" = "8:{8DF23E72-EE27-4FB9-9A9E-9FAE56A764E5}"
         "UpgradeCode" = "8:{61CCDC97-88DD-495F-A1C6-37AF2344559A}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -289,7 +289,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2C4B43D270694118B604CD4FEB806D55"
             {
-            "Name" = "8:ColorPickerへのショートカット"
+            "Name" = "8:ZeikomiColorPickerへのショートカット"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -716,7 +716,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_425B5F6B1E5C4FDD89988C68EAE1E29D"
             {
-            "SourcePath" = "8:..\\ZeikomiColorPicker\\obj\\Debug\\net6.0-windows\\apphost.exe"
+            "SourcePath" = "8:..\\ZeikomiColorPicker\\obj\\Release\\net6.0-windows\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B72B9F78B40E4351B73FAF44D7275ED1"
