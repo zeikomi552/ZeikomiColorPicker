@@ -92,15 +92,13 @@
                                 <DataGridTemplateColumn>
                                     <DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate>
-                                            <Grid Background="{Binding BgColor}"/>
+                                            <TextBlock Width="20" Height="20" Background="{Binding BgColor}"/>
                                         </DataTemplate>
                                     </DataGridTemplateColumn.CellTemplate>
                                 </DataGridTemplateColumn>
                                 <DataGridTextColumn Header="色" Binding="{Binding ColorObject}" IsReadOnly="True"/>
                                 <DataGridTextColumn Header="RGB(10進)" Binding="{Binding Decimal}" IsReadOnly="True"/>
                                 <DataGridTextColumn Header="RGB(16進)" Binding="{Binding Hex}" IsReadOnly="True"/>
-                                <DataGridTextColumn Header="日本の色名" Binding="{Binding NameJP}"/>
-                                <DataGridTextColumn Header="世界の色名" Binding="{Binding NameWeb}"/>
                             </DataGrid.Columns>
                         </DataGrid>
                         <TextBlock Margin="5" Grid.Row="1" Text="Insertで追加できます"/>
@@ -109,11 +107,11 @@
                 </GroupBox>
             </Grid>
         </Grid>
-        <StatusBar Grid.Row="2" Height="23" HorizontalAlignment="Stretch" Margin="0,10,0,0" Name="StatusBar1" VerticalAlignment="Bottom" >
+        <StatusBar Grid.Row="2"  HorizontalAlignment="Stretch" Margin="0,10,0,0" Name="StatusBar1" VerticalAlignment="Bottom" >
             <StackPanel Orientation="Horizontal">
                 <StackPanel Grid.Row="1" VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal">
-                        <Button Margin="5" Content="10進数でコピー">
+                        <Button Margin="5" Content="10進数でコピー" Cursor="Hand">
                             <b:Interaction.Triggers>
                                 <b:EventTrigger EventName="Click">
                                     <b:CallMethodAction TargetObject="{Binding}" MethodName="CopyRGB10"/>
@@ -131,20 +129,20 @@
                 </StackPanel>
 
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="座標 (X,Y) = "/>
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="("/>
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding CursorPosManager.CursorPos.X}"/>
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text=","/>
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding CursorPosManager.CursorPos.Y}"/>
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text=")"/>
+                    <TextBlock Foreground="Purple" HorizontalAlignment="Center" VerticalAlignment="Center" Text="座標 (X,Y) = "/>
+                    <TextBlock Foreground="Purple" HorizontalAlignment="Center" VerticalAlignment="Center" Text="("/>
+                    <TextBlock Foreground="Purple" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding CursorPosManager.CursorPos.X}"/>
+                    <TextBlock Foreground="Purple" HorizontalAlignment="Center" VerticalAlignment="Center" Text=","/>
+                    <TextBlock Foreground="Purple" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding CursorPosManager.CursorPos.Y}"/>
+                    <TextBlock Foreground="Purple" HorizontalAlignment="Center" VerticalAlignment="Center" Text=")"/>
                 </StackPanel>
 
                 <StackPanel Margin="5, 0" Orientation="Horizontal">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="(R,G,B) = "/>
-                        <TextBlock Text="{Binding RGBManager.RGBText}"/>
+                        <TextBlock Foreground="Purple" VerticalAlignment="Center" Text="(R,G,B) = "/>
+                        <TextBlock Foreground="Purple" VerticalAlignment="Center" Text="{Binding RGBManager.RGBText}"/>
                     </StackPanel>
-                    <TextBlock Margin="5, 0" Text="{Binding RGBManager.RGBHex}"/>
+                    <TextBlock Foreground="Purple" VerticalAlignment="Center" Margin="5, 0" Text="{Binding RGBManager.RGBHex}"/>
                 </StackPanel>
                 
             </StackPanel>
