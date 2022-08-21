@@ -5,7 +5,20 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Common\icons\app-main.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Common\icons\app-main.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Common\icons\app-main.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Common\icons\app-main.png" />
+  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Views\" />
