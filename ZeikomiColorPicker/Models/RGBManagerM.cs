@@ -29,10 +29,13 @@ namespace ZeikomiColorPicker.Models
                 if (_BgColor == null || !_BgColor.Equals(value))
                 {
                     _BgColor = value;
-                    NotifyPropertyChanged("BgColor");
+					NotifyPropertyChanged("BgColor");
                     NotifyPropertyChanged("RGBText");
                     NotifyPropertyChanged("RGBHex");
-                }
+                    NotifyPropertyChanged("R");
+                    NotifyPropertyChanged("G");
+                    NotifyPropertyChanged("B");
+				}
             }
         }
         #endregion
@@ -60,12 +63,76 @@ namespace ZeikomiColorPicker.Models
         {
             get
             {
-                byte[] array = { this.BgColor.Color.R, this.BgColor.Color.G, this.BgColor.Color.B };
+                byte[] array = { R, G, B };
                 string text = $"{BgColor}";
                 return text;
 
             }
         }
-        #endregion
-    }
+		#endregion
+		#region R[R]プロパティ
+		/// <summary>
+		/// R[R]プロパティ
+		/// </summary>
+		public byte R
+		{
+			get
+			{
+				return this.BgColor.Color.R;
+			}
+			set
+			{
+				if (!this.BgColor.Color.R.Equals(value))
+				{
+					BgColor.Color = System.Windows.Media.Color.FromArgb(BgColor.Color.A, value, BgColor.Color.G, BgColor.Color.B);
+					NotifyPropertyChanged("R");
+				}
+			}
+		}
+		#endregion
+
+		#region G[G]プロパティ
+		/// <summary>
+		/// G[G]プロパティ
+		/// </summary>
+		public byte G
+		{
+			get
+			{
+				return this.BgColor.Color.G;
+			}
+			set
+			{
+				if (!this.BgColor.Color.G.Equals(value))
+				{
+					BgColor.Color = System.Windows.Media.Color.FromArgb(BgColor.Color.A, BgColor.Color.R, value, BgColor.Color.B);
+					NotifyPropertyChanged("G");
+				}
+			}
+		}
+		#endregion
+
+		#region B[B]プロパティ
+		/// <summary>
+		/// B[B]プロパティ
+		/// </summary>
+		public byte B
+		{
+			get
+			{
+				return this.BgColor.Color.B;
+			}
+			set
+			{
+				if (!this.BgColor.Color.B.Equals(value))
+				{
+					BgColor.Color = System.Windows.Media.Color.FromArgb(BgColor.Color.A, BgColor.Color.R, BgColor.Color.G, value);
+					NotifyPropertyChanged("B");
+				}
+			}
+		}
+		#endregion
+
+
+	}
 }

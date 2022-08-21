@@ -59,7 +59,11 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-                <StackPanel Margin="5" Orientation="Horizontal">
+                <Grid Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
                     <StackPanel>
                         <TextBlock Margin="5" Text="Escapeキーで固定します"/>
                         <Border Width="100" Height="100" Margin="5" BorderBrush="Gray" BorderThickness="1">
@@ -74,7 +78,73 @@
                             <TextBlock Text="{Binding RGBManager.RGBHex}"/>
                         </StackPanel>
                     </StackPanel>
-                </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" Grid.Column="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center" Width="30" Text="{Binding Value, ElementName=slider, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Cursor="Arrow"/>
+                            <StackPanel Grid.Column="1">
+                                <TextBlock Width="255" Margin="5" Text="R" TextAlignment="Justify">
+                                    <TextBlock.Background>
+                                        <LinearGradientBrush EndPoint="0,0.5" StartPoint="1,0.5">
+                                            <GradientStop Color="Red" Offset="0"/>
+                                            <GradientStop Color="Black" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </TextBlock.Background>
+                                </TextBlock>
+                                <Slider Grid.Column="1" x:Name="slider" Width="255" Minimum="0" Maximum="255" TickFrequency="1" IsSnapToTickEnabled="True"
+                                        SmallChange="1" Value="{Binding RGBManager.R, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                                    <b:Interaction.Triggers>
+                                        <b:EventTrigger EventName="ValueChanged">
+                                            <b:CallMethodAction TargetObject="{Binding}" MethodName="SliderValueChanged"/>
+                                        </b:EventTrigger>
+                                    </b:Interaction.Triggers>
+                                </Slider>
+                            </StackPanel>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center" Width="30" Text="{Binding Value, ElementName=slider2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Cursor="Arrow"/>
+                            <StackPanel Grid.Column="1">
+                                <TextBlock Width="255" Margin="5" Text="R" TextAlignment="Justify">
+                                    <TextBlock.Background>
+                                        <LinearGradientBrush EndPoint="0,0.5" StartPoint="1,0.5">
+                                            <GradientStop Color="Lime" Offset="0"/>
+                                            <GradientStop Color="Black" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </TextBlock.Background>
+                                </TextBlock>
+                                <Slider Grid.Column="1" x:Name="slider2" Width="255" Minimum="0" Maximum="255" TickFrequency="1" IsSnapToTickEnabled="True" SmallChange="1" 
+                                        Value="{Binding RGBManager.G, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            </StackPanel>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center" Width="30" Text="{Binding Value, ElementName=slider3, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Cursor="Arrow"/>
+                            <StackPanel Grid.Column="1">
+                                <TextBlock Width="255" Margin="5" Text="R" TextAlignment="Justify">
+                                    <TextBlock.Background>
+                                        <LinearGradientBrush EndPoint="0,0.5" StartPoint="1,0.5">
+                                            <GradientStop Color="Blue" Offset="0"/>
+                                            <GradientStop Color="Black" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </TextBlock.Background>
+                                </TextBlock>
+                                <Slider Grid.Column="1" x:Name="slider3" Width="255" Minimum="0" Maximum="255" TickFrequency="1" IsSnapToTickEnabled="True" SmallChange="1" 
+                                        Value="{Binding RGBManager.B, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            </StackPanel>
+                        </Grid>
+
+                    </StackPanel>
+                </Grid>
             </Grid>
             <Grid Grid.Row="1">
                 <GroupBox Margin="5" Header="色">
@@ -144,7 +214,7 @@
                     </StackPanel>
                     <TextBlock Foreground="Purple" VerticalAlignment="Center" Margin="5, 0" Text="{Binding RGBManager.RGBHex}"/>
                 </StackPanel>
-                
+
             </StackPanel>
         </StatusBar>
     </Grid>

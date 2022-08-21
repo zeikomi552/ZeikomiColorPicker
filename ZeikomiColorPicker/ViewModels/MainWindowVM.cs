@@ -303,6 +303,22 @@ namespace ZeikomiColorPicker.ViewModels
         }
 
         /// <summary>
+        /// スライダー変更時の処理
+        /// </summary>
+        public void SliderValueChanged()
+        {
+            try
+            {
+                //System.Windows.Media.Color.FromArgb(color.A, color.R, color.G, color.B);
+                Console.WriteLine("test");
+            }
+            catch (Exception e)
+            {
+                ShowMessage.ShowErrorOK(e.Message, "Error");
+            }
+        }
+
+        /// <summary>
         /// パレットのロード処理
         /// </summary>
         public void LoadPallet()
