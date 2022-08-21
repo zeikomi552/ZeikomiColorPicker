@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:ZeikomiColorPicker"
         xmlns:b="http://schemas.microsoft.com/xaml/behaviors" xmlns:ViewModels="clr-namespace:ZeikomiColorPicker.ViewModels" x:Class="ZeikomiColorPicker.MainWindow"
         mc:Ignorable="d"
-        Title="ZeikomiColorPicker" Height="600" Width="800" Icon="/Common/icons/app-main.png">
+        Title="ZeikomiColorPicker" Height="600" Width="800">
     <mah:MetroWindow.DataContext>
         <ViewModels:MainWindowVM/>
     </mah:MetroWindow.DataContext>

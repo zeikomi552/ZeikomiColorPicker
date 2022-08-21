@@ -9,15 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Common\icons\app-main.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Common\icons\app-main.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="Common\icons\app-main.png" />
+    <Resource Include="Common\icons\app-main.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +29,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MVVMCore\MVVMCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Common\icons\app-main.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
