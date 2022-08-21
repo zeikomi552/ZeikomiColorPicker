@@ -86,6 +86,9 @@ namespace ZeikomiColorPicker.Models
 				{
 					BgColor.Color = System.Windows.Media.Color.FromArgb(BgColor.Color.A, value, BgColor.Color.G, BgColor.Color.B);
 					NotifyPropertyChanged("R");
+					NotifyPropertyChanged("BgColor");
+					NotifyPropertyChanged("RGBText");
+					NotifyPropertyChanged("RGBHex");
 				}
 			}
 		}
@@ -107,6 +110,9 @@ namespace ZeikomiColorPicker.Models
 				{
 					BgColor.Color = System.Windows.Media.Color.FromArgb(BgColor.Color.A, BgColor.Color.R, value, BgColor.Color.B);
 					NotifyPropertyChanged("G");
+					NotifyPropertyChanged("BgColor");
+					NotifyPropertyChanged("RGBText");
+					NotifyPropertyChanged("RGBHex");
 				}
 			}
 		}
@@ -128,6 +134,9 @@ namespace ZeikomiColorPicker.Models
 				{
 					BgColor.Color = System.Windows.Media.Color.FromArgb(BgColor.Color.A, BgColor.Color.R, BgColor.Color.G, value);
 					NotifyPropertyChanged("B");
+					NotifyPropertyChanged("BgColor");
+					NotifyPropertyChanged("RGBText");
+					NotifyPropertyChanged("RGBHex");
 				}
 			}
 		}
