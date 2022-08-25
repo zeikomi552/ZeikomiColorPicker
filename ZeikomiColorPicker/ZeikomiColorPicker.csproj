@@ -6,7 +6,9 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>Common\icons\App.ico</ApplicationIcon>
-    <PackageIcon>app-128x28.png</PackageIcon>
+    <PackageIcon>app-128x128.png</PackageIcon>
+    <Version>1.0.1</Version>
+    <Copyright>\552(税込)</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
@@ -36,7 +38,11 @@
     <None Update="Common\icons\app-main.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="Common\icons\icon-org\app-128x28.png">
+    <None Update="Common\icons\icon-org\app-128x128.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="Common\icons\icon-org\app-64x64.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
