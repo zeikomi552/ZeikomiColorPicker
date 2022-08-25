@@ -21,7 +21,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_95AA9B4B98DF43EC9E29EE680D7A98D7"
+        "MsmKey" = "8:_D8BEF30A45A946F889955088DEDB4B83"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -43,6 +43,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -59,6 +67,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -90,10 +114,10 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_95AA9B4B98DF43EC9E29EE680D7A98D7"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D8BEF30A45A946F889955088DEDB4B83"
             {
-            "SourcePath" = "8:..\\ZeikomiColorPicker\\Common\\icons\\app-main.ico"
-            "TargetName" = "8:app-main.ico"
+            "SourcePath" = "8:..\\ZeikomiColorPicker\\Common\\icons\\App.ico"
+            "TargetName" = "8:App.ico"
             "Tag" = "8:"
             "Folder" = "8:_B72B9F78B40E4351B73FAF44D7275ED1"
             "Condition" = "8:"
@@ -167,7 +191,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ZeikomiColorPicker"
         "ProductCode" = "8:{BF3C40CF-096F-414D-B807-CC6B3BF1FA3A}"
-        "PackageCode" = "8:{8DF23E72-EE27-4FB9-9A9E-9FAE56A764E5}"
+        "PackageCode" = "8:{55439173-CF84-45CE-B9CE-615442770ABB}"
         "UpgradeCode" = "8:{61CCDC97-88DD-495F-A1C6-37AF2344559A}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -184,7 +208,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_95AA9B4B98DF43EC9E29EE680D7A98D7"
+        "ARPPRODUCTICON" = "8:_D8BEF30A45A946F889955088DEDB4B83"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -287,6 +311,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2533E37AF829443CB0919D36CC809291"
+            {
+            "Name" = "8:ZeikomiColorPicker-ショートカット"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_425B5F6B1E5C4FDD89988C68EAE1E29D"
+            "Folder" = "8:_BDA5E60B2BF44823BAF48B015F5EF55C"
+            "WorkingFolder" = "8:_B72B9F78B40E4351B73FAF44D7275ED1"
+            "Icon" = "8:_D8BEF30A45A946F889955088DEDB4B83"
+            "Feature" = "8:"
+            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2C4B43D270694118B604CD4FEB806D55"
             {
             "Name" = "8:ZeikomiColorPickerへのショートカット"
@@ -298,21 +336,7 @@
             "Target" = "8:_425B5F6B1E5C4FDD89988C68EAE1E29D"
             "Folder" = "8:_E585C0BF85204F848FFA43AD47530A01"
             "WorkingFolder" = "8:_B72B9F78B40E4351B73FAF44D7275ED1"
-            "Icon" = "8:_95AA9B4B98DF43EC9E29EE680D7A98D7"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7B7F21586A374209A334A56659AA32DB"
-            {
-            "Name" = "8:ZeikomiColorPickerへのショートカット"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_425B5F6B1E5C4FDD89988C68EAE1E29D"
-            "Folder" = "8:_BDA5E60B2BF44823BAF48B015F5EF55C"
-            "WorkingFolder" = "8:_B72B9F78B40E4351B73FAF44D7275ED1"
-            "Icon" = "8:_95AA9B4B98DF43EC9E29EE680D7A98D7"
+            "Icon" = "8:_D8BEF30A45A946F889955088DEDB4B83"
             "Feature" = "8:"
             }
         }

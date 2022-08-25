@@ -5,11 +5,11 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>Common\icons\app-main.ico</ApplicationIcon>
+    <ApplicationIcon>Common\icons\App.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Resource Include="Common\icons\app-main.ico" />
+    <Content Include="Common\icons\App.ico" />
   </ItemGroup>
 
   <ItemGroup>
